@@ -10,6 +10,6 @@ public class Fibonacci {
         for (num2=1;num2<num3;num2++){
             num1=num1+num2;
         }
-        System.out.println("Fibonacci Series:"+num1);
+        System.out.print("Fibonacci Series:"+num1);
     }
 }

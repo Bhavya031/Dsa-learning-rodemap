@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class calculator {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter your first number:");
+        System.out.print("Enter your first number:");
         int num1 = input.nextInt();
-        System.out.println("Enter your second number:");
+        System.out.print("Enter your second number:");
         int num2 = input.nextInt();
-        System.out.println("Enter your operator :");
+        System.out.print("Enter your operator :");
         var operator = input.next();
         int calculate=0;
         if (operator.equals("+")) {

@@ -12,10 +12,10 @@ public class Palindrome {
             reverse[num]=word[word.length-num-1];
         }
         if (reverse==word){
-            System.out.println("this word is Palindrome word");
+            System.out.print("this word is Palindrome word");
         }
         else {
-            System.out.println("this word is Palindrome word");
+            System.out.print("this word is Palindrome word");
         }
     }
 }

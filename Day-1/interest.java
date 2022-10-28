@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class interest {
+public class interest{
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
         System.out.print("enter the principal:");
