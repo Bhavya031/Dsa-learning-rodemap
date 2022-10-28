@@ -6,6 +6,6 @@ public class currencyconvert {
         System.out.print("enter money in rupees:");
         Float rupees=input.nextFloat();
         Float dollar=rupees*0.012f;
-        System.out.print("Dollar:"+dollar);
+        System.out.println("Dollar:"+dollar);
     }
 }
