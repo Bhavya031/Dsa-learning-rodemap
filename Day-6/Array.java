@@ -18,7 +18,7 @@ public class Array {
 
     }
     static void intarr(){
-        System.out.print("enter any five number:");
+        System.out.print("Enter any five number:");
         Scanner input=new Scanner(System.in);
         int[] a =new int[5];
         for(int i=0;i< a.length;i++){
