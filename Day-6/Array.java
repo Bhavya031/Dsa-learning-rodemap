@@ -21,8 +21,8 @@ public class Array {
         System.out.print("Enter any five number:");
         Scanner input=new Scanner(System.in);
         int[] a =new int[5];
-        for(int i=0;i< a.length;i++){
-            a[i]=input.nextInt();
+        for (int num : a){
+            a[num]=input.nextInt();
             System.out.println(Arrays.toString(a));
         }
     }
