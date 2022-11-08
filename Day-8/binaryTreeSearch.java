@@ -1,7 +1,7 @@
 public class binaryTreeSearch {
     public static void main(String[] args) {
-        int[] arr={0,1,2,3,4,3,2,1,0};
-        System.out.println("your number's index is:"+binary(arr,3));
+        int[] arr={0,1,2,3};
+        System.out.println("your number's index is:"+binary(arr,4));
     }
     static int binary(int[] arr,int target){
         int start=0;
