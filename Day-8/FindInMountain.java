@@ -1,55 +1,36 @@
+import java.util.Arrays;
+
 public class FindInMountain {
     public static void main(String[] args) {
-        int[] arr={1,3};
-        System.out.println(MountainFind(arr,1));
-    }
-    static int MountainFind(int[] arr,int target){
-        int peak = peak(arr);
-        int firstTry = binary(arr, target, 0, peak);
-        if (firstTry != -1) {
-            return firstTry;
+        int[] arr={0,1,2,3,4,5,6,7,8,9,10,11,-1,-2};
+        for (int i = 0; i < arr.length-1; i++) {
+            System.out.println(find(arr,-1));
         }
-        // try to search in second half
-        return binary(arr, target, peak, arr.length - 1);
     }
-    static int binary(int[] arr,int target,int start,int end){
-        if (arr.length==1){
-            if(arr[0]==target){
-                return 0;
+    static int find(int[] nums,int target){
+        int left = 0;
+        int right = nums.length-1;
+        int mid;
+        while(left<=right){
+            mid = left+(right-left)/2;
+            if(nums[mid] == target) return mid;
+            // condition for left side is sort
+            if(nums[left]<=nums[mid]){
+                if(target>=nums[left] && target <=nums[mid]){
+                    right = mid-1;
+                }else {
+                    left = mid+1;
+                }
             }
-            return -1;
-        }
-           boolean isAsc = arr[start] < arr[end];
-        while (start<=end) {
-            int mid = start + (end - start) / 2;
-            if (target < arr[mid]) {
-                end = mid - 1;
-            } else if (target > arr[mid]) {
-                start = mid + 1;
-            } else {
-                return mid;
+            else{
+                if(target>=nums[mid] && target <=nums[right]){
+                    left = mid+1;
+                }else{
+                    right = mid-1;
+                }
             }
         }
         return -1;
-    }
-    static int peak(int[] arr){
-        int start = 0;
-        int end = arr.length - 1;
-        while (start <= end) {
-            int mid = start + (end - start) / 2;
-            // 4 cases over here
-            if (mid < end && arr[mid] > arr[mid + 1]) {
-                return mid;
-            }
-            if (mid > start && arr[mid] < arr[mid - 1]) {
-                return mid-1;
-            }
-            if (arr[mid] <= arr[start]) {
-                end = mid - 1;
-            } else {
-                start = mid + 1;
-            }
-        }
-        return start;
+
     }
 }
