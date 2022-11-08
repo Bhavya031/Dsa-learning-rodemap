@@ -1,6 +1,6 @@
 public class MountainArray {
     public static void main(String[] args) {
-        int[] arr={0,4,3,2,1,0};
+        int[] arr={15,18};
         System.out.println(mountain(arr));
     }
     static int mountain(int[] arr){
