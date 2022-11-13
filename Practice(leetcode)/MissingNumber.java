@@ -1,8 +1,6 @@
-import java.util.Arrays;
-import java.util.Collections;
 public class MissingNumber {
     public static void main(String[] args) {
-        int[] arr={5,2,3,1,0};
+        int[] arr={8,2,3,1,0};
         cycle(arr);
     }
     static void cycle(int[] arr){
