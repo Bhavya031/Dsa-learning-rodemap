@@ -11,7 +11,7 @@ public class largestnumber {
             System.out.println("second number is the largest");
         }
         else {
-            System.out.println("first number is the largest");
+            System.out.println("first number is the largest ");
         }
     }
 }
